@@ -14,8 +14,8 @@
 import http from "k6/http";
 import { group, check, sleep } from "k6";
 
-const BASE_URL = "http://145.108.225.7:12345";
-const TS_AUTH_SERVICE_URL = "http://145.108.225.7:12340";
+const BASE_URL = "http://145.108.225.17:12345";
+const TS_AUTH_SERVICE_URL = "http://145.108.225.17:12340";
 // Sleep duration between successive requests.
 // You might want to edit the value of this variable or remove calls to the sleep function on the script.
 const SLEEP_DURATION = 0.1;

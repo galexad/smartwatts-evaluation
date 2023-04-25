@@ -14,12 +14,12 @@
 import http from "k6/http";
 import { group, check, sleep } from "k6";
 
-const BASE_URL = "http://145.108.225.7:15679";
+const BASE_URL = "http://145.108.225.17:15679";
 // Sleep duration between successive requests.
 // You might want to edit the value of this variable or remove calls to the sleep function on the script.
 const SLEEP_DURATION = 0.1;
 // Global variables should be initialized.
-const TS_AUTH_SERVICE_URL = "http://145.108.225.7:12340";
+const TS_AUTH_SERVICE_URL = "http://145.108.225.17:12340";
 const USERNAME = 'admin';
 const PASSWORD = '222222';
 

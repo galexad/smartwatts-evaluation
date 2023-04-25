@@ -27,7 +27,7 @@ services:
   netdata:
     image: netdata/netdata
     container_name: netdata
-    hostname: 145.108.225.7  # set to fqdn of host
+    hostname: 145.108.225.17  # set to fqdn of host
     ports:
       - 19998:19999
     restart: unless-stopped
