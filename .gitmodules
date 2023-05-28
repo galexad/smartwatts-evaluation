@@ -1,3 +1,6 @@
 [submodule "smartwatts-experiment-runner"]
 	path = smartwatts-experiment-runner
 	url = https://github.com/galexad/smartwatts-experiment-runner.git
+[submodule "experiment-runner"]
+	path = experiment-runner
+	url = https://github.com/galexad/experiment-runner.git
