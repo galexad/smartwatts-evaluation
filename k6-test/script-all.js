@@ -70,7 +70,6 @@ export function setup() {
 
     const authTokenAdmin = loginResAdmin.json('data')["token"];
     check(authTokenAdmin, { 'Logged in successfully': () => authTokenAdmin !== '' });
-
     let body = {"username": USERNAME, "password": PASSWORD};
     const loginRes = http.post(`${TS_AUTH_SERVICE_URL}/api/v1/users/login`, JSON.stringify(body), params);
 
