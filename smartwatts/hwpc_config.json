@@ -2,7 +2,7 @@
   "name": "sensor",
   "verbose": false,
   "frequency": 1000,
-  "output": {    
+  "output": {
     "type": "mongodb",
     "uri": "mongodb://127.0.0.1",
     "database": "powerapi",
@@ -10,11 +10,17 @@
   },
   "system": {
     "rapl": {
-      "events": ["RAPL_ENERGY_PKG"],
+      "events": [
+        "RAPL_ENERGY_PKG"
+      ],
       "monitoring_type": "MONITOR_ONE_CPU_PER_SOCKET"
     },
     "msr": {
-      "events": ["TSC", "APERF", "MPERF"]
+      "events": [
+        "TSC",
+        "APERF",
+        "MPERF"
+      ]
     }
   },
   "container": {
