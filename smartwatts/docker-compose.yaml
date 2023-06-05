@@ -38,7 +38,7 @@ services:
    
 
   power-api-smartwatts:
-    image: powerapi/smartwatts-formula
+    image: powerapi/smartwatts-formula:2.0.1
     cap_add:
       - ALL
     volumes:
