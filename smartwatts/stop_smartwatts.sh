@@ -14,5 +14,7 @@ echo  $sudoPass | sudo -S docker cp smartwatts-power-api-smartwatts-1:/opt/power
 
 # kill tmux session
 echo "Stopping smartwatts session"
+echo  $sudoPass | sudo -S docker-compose down;
+
 tmux kill-session -t smartwatts
 echo "smartwatts session stopped"
