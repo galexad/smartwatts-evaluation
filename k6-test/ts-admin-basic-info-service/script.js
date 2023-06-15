@@ -25,8 +25,8 @@ const PASSWORD = '222222';
 
 export function setup() {
     // authenticate via a Bearer token
-    let params = {headers: {"Content-Type": "application/json", "Accept": "*/*"}};
-    let body = {"username": USERNAME, "password": PASSWORD};
+    let params = { headers: { "Content-Type": "application/json", "Accept": "*/*" } };
+    let body = { "username": USERNAME, "password": PASSWORD };
     const loginRes = http.post(`${TS_AUTH_SERVICE_URL}/api/v1/users/login`, JSON.stringify(body), params);
 
     const authToken = loginRes.json('data')["token"];
@@ -35,8 +35,8 @@ export function setup() {
     return authToken;
 }
 
-export default function(authToken) {
-    let params = {headers: {"Authorization": `Bearer ${authToken}`, "Content-Type": "application/json", "Accept": "*/*"}};
+export default function (authToken) {
+    let params = { headers: { "Authorization": `Bearer ${authToken}`, "Content-Type": "application/json", "Accept": "*/*" } };
 
     group("/api/v1/adminbasicservice/adminbasic/trains/{id}", () => {
         let id = 'GaoTieOne';
@@ -70,8 +70,8 @@ export default function(authToken) {
         // Request No. 2
         {
             let url = BASE_URL + `/api/v1/adminbasicservice/adminbasic/prices`;
-            let body = {"basicPriceRate": 0.38, "firstClassPriceRate": 1, "id": "6d20b8cb-039c-474c-ae25-b6177ea41152", "routeId": "92708982-77af-4318-be25-57ccb0ff69ad", "trainType": "GaoTieOne"};
-            let request = http.del(url, JSON.stringify(body) , params);
+            let body = { "basicPriceRate": 0.38, "firstClassPriceRate": 1, "id": "6d20b8cb-039c-474c-ae25-b6177ea41152", "routeId": "92708982-77af-4318-be25-57ccb0ff69ad", "trainType": "GaoTieOne" };
+            let request = http.del(url, JSON.stringify(body), params);
 
             check(request, {
                 "DELETE OK": (r) => r.status === 200
@@ -123,8 +123,8 @@ export default function(authToken) {
         // Request No. 2
         {
             let url = BASE_URL + `/api/v1/adminbasicservice/adminbasic/stations`;
-            let body = {"id": "shanghai", "name": "Shang Hai", "stayTime": 10};
-            let request = http.del(url, JSON.stringify(body) , params);
+            let body = { "id": "shanghai", "name": "Shang Hai", "stayTime": 10 };
+            let request = http.del(url, JSON.stringify(body), params);
 
             check(request, {
                 "DELETE OK": (r) => r.status === 200
@@ -149,7 +149,7 @@ export default function(authToken) {
         // Request No. 2
         {
             let url = BASE_URL + `/api/v1/adminbasicservice/adminbasic/configs`;
-            let body = {"description": "DirectTicketAllocationProportion", "name": "DirectTicketAllocationProportion", "value": "DirectTicketAllocationProportion value"};
+            let body = { "description": "DirectTicketAllocationProportion", "name": "DirectTicketAllocationProportion", "value": "DirectTicketAllocationProportion value" };
             let request = http.post(url, JSON.stringify(body), params);
 
             check(request, {
@@ -175,7 +175,7 @@ export default function(authToken) {
         // Request No. 2
         {
             let url = BASE_URL + `/api/v1/adminbasicservice/adminbasic/trains`;
-            let body = {"averageSpeed": 250, "confortClass": 200, "economyClass": 300, "id": "rapid-cfr"};
+            let body = { "averageSpeed": 250, "confortClass": 200, "economyClass": 300, "id": "rapid-cfr" };
             let request = http.post(url, JSON.stringify(body), params);
 
             check(request, {
@@ -201,7 +201,7 @@ export default function(authToken) {
         // Request No. 2
         {
             let url = BASE_URL + `/api/v1/adminbasicservice/adminbasic/contacts`;
-            let body = {"accountId": "153632a9-14eb-44f1-7b89-7431fea1cba3", "documentNumber": "54321", "documentType": 2, "id": "153632a9-14eb-44f1-7b89-7431fea1cba3", "name": "MadaDinga", "phoneNumber": "74645"};
+            let body = { "accountId": "153632a9-14eb-44f1-7b89-7431fea1cba3", "documentNumber": "54321", "documentType": 2, "id": "153632a9-14eb-44f1-7b89-7431fea1cba3", "name": "MadaDinga", "phoneNumber": "74645" };
             let request = http.post(url, JSON.stringify(body), params);
 
             check(request, {

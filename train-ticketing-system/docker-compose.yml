@@ -290,8 +290,8 @@ services:
     build: ts-notification-service
     image: ${IMG_REPO}/ts-notification-service:${IMG_TAG}
     restart: always
-    depends_on:
-      - rabbitmq 
+    # depends_on:
+    #   - rabbitmq 
     ports:
       - 17853:17853
     volumes:
