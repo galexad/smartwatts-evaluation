@@ -1,0 +1,4 @@
+workload,smartwatts_energy,wattsup_energy,run_number
+HIGH,36992.0,184462.0,40
+MEDIUM,31047.0,180269.0,40
+LOW,25481.0,135634.0,40
